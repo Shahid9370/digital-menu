@@ -1,0 +1,25 @@
+/* styles/globals.css */
+
+/* Global background for the entire app */
+body {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+}
+
+/* Optionally style the root app container if needed */
+#root {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* Remove default link styling globally if desired */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Add other global resets or styles here */

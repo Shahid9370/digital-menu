@@ -1,0 +1,93 @@
+/* Modern animated search bar for menu - fully mobile responsive, clean and clear */
+
+.search {
+  width: 100%;
+  max-width: 98vw;
+  min-width: 0;
+  margin: 1.2rem auto 1.6rem auto;
+  padding: 0.82rem 1.1rem;
+  border: none;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e9ecef 100%);
+  box-shadow: 0 4px 16px rgba(52, 152, 219, 0.31), 0 1px 3px rgba(44, 62, 80, 0.06);
+  font-size: 1.07rem;
+  color: #2c3e50;
+  font-family: 'Arial', 'Segoe UI', sans-serif;
+  outline: none;
+  transition: box-shadow 0.26s, background 0.26s, transform 0.13s;
+  opacity: 0;
+  animation: fadeInExpand 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.19s;
+  box-sizing: border-box;
+}
+
+.search::placeholder {
+  color: #7f8c8d;
+  opacity: 1;
+  letter-spacing: 0.4px;
+  font-size: 1rem;
+}
+
+.search:focus {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
+  box-shadow: 0 7px 28px rgba(41, 128, 185, 0.14), 0 2px 7px rgba(44, 62, 80, 0.11);
+  transform: scale(1.018);
+}
+
+/* Animation for appearance */
+@keyframes fadeInExpand {
+  from {
+    opacity: 0;
+    transform: scaleX(0.97) scaleY(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search {
+    max-width: 99vw;
+    font-size: 0.97rem;
+    padding: 0.61rem 0.7rem;
+    margin-top: 1.2rem;
+    margin-right: auto;
+    margin-bottom: 1.6rem;
+    margin-left: auto;
+    border-radius: 20px;
+  }
+  .search::placeholder {
+    font-size: 0.92rem;
+    letter-spacing: 0.33px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.89rem;
+    border-radius: 14px;
+    margin-top: 3.1rem;
+    margin-right: auto;
+    margin-bottom: 1.6rem;
+    margin-left: auto;
+  }
+  .search::placeholder {
+    font-size: 0.87rem;
+    letter-spacing: 0.19px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .search {
+    max-width: 600px;
+    margin-top: 1.2rem;
+    margin-right: auto;
+    margin-bottom: 1.6rem;
+    margin-left: auto;
+    font-size: 1.16rem;
+    padding: 1rem 1.2rem;
+    border-radius: 32px;
+  }
+}

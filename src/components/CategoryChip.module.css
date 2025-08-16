@@ -1,0 +1,54 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.4rem;
+  margin: 0.1rem 0.25rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #2c3e50;
+  font-family: 'Arial', 'Segoe UI', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.459);
+  transition: background 0.25s, color 0.25s, transform 0.15s, box-shadow 0.25s;
+  opacity: 0;
+  animation: fadeInChip 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.selected {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: #ecf0f1;
+  box-shadow: 0 4px 16px rgba(41, 128, 185, 0.23);
+  transform: scale(1.05);
+}
+
+.chip:hover:not(.selected),
+.chip:focus:not(.selected) {
+  background: linear-gradient(135deg, #e3f2fd 0%, #d6eaff 100%);
+  color: #3498db;
+  box-shadow: 0 4px 14px rgba(52, 152, 219, 0.18);
+  transform: scale(1.03);
+  outline: none;
+}
+
+@keyframes fadeInChip {
+  from { opacity: 0; transform: translateY(10px) scale(0.97);}
+  to { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chip {
+    font-size: 0.97rem;
+    padding: 0.48rem 1rem;
+  }
+}

@@ -1,0 +1,194 @@
+/* Header fix: Add top padding to container so content starts below header */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e0f7fa 0%, #ffffff 80%);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  padding-top: 80px; /* Adjust to match your Header height */
+}
+
+/* If your Header is NOT fixed, you can reduce/remove this padding */
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0 1.5rem 0;
+  background: linear-gradient(90deg, #3498db 0%, #2ecc71 100%);
+  color: #fff;
+  border-radius: 18px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 14px rgba(52,152,219,0.08);
+}
+.heroContent {
+  text-align: center;
+}
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(52,152,219,0.17);
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+.heroTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.02em;
+}
+.heroSubtitle {
+  font-size: 1.13rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+.heroIntro {
+  font-size: 1.01rem;
+  margin-bottom: 0.6rem;
+  color: #f8f8f8;
+}
+
+/* Experience Section */
+.experienceSection {
+  padding: 2rem 0 1rem 0;
+  background: #f6fcff;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+.sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.1rem;
+  color: #3498db;
+}
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.experienceCard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.07);
+  padding: 1.2rem 1rem;
+  font-size: 1rem;
+}
+.expCompany {
+  font-size: 1rem;
+  color: #2ecc71;
+  font-weight: 500;
+}
+.expPeriod {
+  font-size: 0.97rem;
+  color: #555;
+  margin-bottom: 0.5em;
+}
+
+/* Projects Section */
+.projectsSection {
+  padding: 2rem 0 1rem 0;
+  background: #e8f6ee;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.projectCard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.07);
+  padding: 1.2rem 1rem;
+  font-size: 1rem;
+}
+.projectMeta {
+  font-size: 0.98rem;
+  color: #3498db;
+  margin-bottom: 0.5em;
+}
+
+/* Skills Section */
+.skillsSection {
+  background: #f6fcff;
+  padding: 2rem 0 2rem 0;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.skillBlock {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.07);
+  padding: 1.1rem 1rem;
+}
+.skillTitle {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #2ecc71;
+  margin-bottom: 0.5em;
+}
+.skillList {
+  margin: 0;
+  padding-left: 1.1em;
+  font-size: 0.99em;
+}
+.skillList li {
+  margin-bottom: 0.3em;
+}
+
+/* Portfolio CTA */
+.ctaSection {
+  text-align: center;
+  padding: 2rem 0 2.3rem 0;
+}
+.ctaButton {
+  background: linear-gradient(90deg, #3498db 60%, #2ecc71 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.18rem;
+  letter-spacing: 0.02em;
+  padding: 0.9rem 2.1rem;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.09);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.ctaButton:hover, .ctaButton:focus {
+  background: linear-gradient(90deg, #2ecc71 0%, #3498db 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding-top: 60px; /* smaller header on mobile */
+  }
+  .heroTitle { font-size: 1.27rem; }
+  .experienceCard, .projectCard { font-size: 0.97rem; padding: 1rem 0.4rem; }
+  .skillsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+  .skillBlock {
+    font-size: 0.95rem;
+    padding: 0.8rem 0.5rem;
+  }
+  .sectionTitle { font-size: 1.05rem; }
+  .ctaButton { font-size: 1rem; padding: 0.48rem 0.9rem; }
+}
